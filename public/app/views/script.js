@@ -42,6 +42,10 @@ function getCookie(name){
     return result;
 }
 
+function logout(){
+    deleteCookie('name')
+}
+
 async function productsRender(){
     const father = document.getElementById('menu')
     const products = await fetch("http://localhost:3333/products")
