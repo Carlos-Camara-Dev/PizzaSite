@@ -12,6 +12,14 @@
   margin-top: 1rem;
   width: 100%;
 }
+#profilePic{
+  width: 5%;
+  padding: 0px;
+}
+.profilePic{
+  border-radius: 35%;
+  width: 100%;
+}
 .footer div {
   display: flex;
   justify-content: center;

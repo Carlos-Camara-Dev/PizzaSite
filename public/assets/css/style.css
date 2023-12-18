@@ -1,11 +1,26 @@
 body {
-    background-image: linear-gradient(#084f00dc,#12b000dc,#0d810070,#12b000dc,#084f00dc);
+    background-image: linear-gradient(
+      #084f00dc,
+      #12b000dc,
+      #0d810070,
+      #12b000dc,
+      #084f00dc
+    );
     background-attachment: fixed;
     /* background: #0d810070; */
     margin: 0;
-}
+  }
+  
+  #profilePic{
+    width: 5%;
+    padding: 0px;
+  }
+  .profilePic{
+    border-radius: 35%;
+    width: 100%;
+  }
 
-.menu_titule {
+  .menu_titule {
     background: #9f0303;
     border-bottom: 3px solid black;
     border-radius: 25px;
@@ -14,13 +29,13 @@ body {
     margin: 2%;
     margin-left: 13%;
     width: 65%;
-}
-
-.menu_titule h2 {
-    font-family: 'Lobster', cursive;
-}
-
-.days {
+  }
+  
+  .menu_titule h2 {
+    font-family: "Lobster", cursive;
+  }
+  
+  .days {
     align-items: center;
     display: flex;
     flex-flow: column wrap;
@@ -29,9 +44,9 @@ body {
     position: fixed;
     right: 0;
     width: 210px;
-}
-
-.days a {
+  }
+  
+  .days a {
     background: #9f0303;
     border-bottom: 3px solid black;
     border-radius: 21px;
@@ -40,31 +55,28 @@ body {
     margin-top: 10%;
     padding: 11px;
     width: 85%;
-}
-
-.days a:hover {
+  }
+  
+  .days a:hover {
     border-bottom: 5px solid #0d8100;
     width: 100%;
-}
-
-
-main {
+  }
+  
+  main {
     display: flex;
     flex-flow: row wrap;
-}
-
-.menu {
-    /* border:3px solid black; */
+  }
+  
+  #menu {
     align-items: center;
     display: flex;
     flex-flow: row wrap;
     margin-left: 5%;
     justify-content: space-around;
     width: 79%;
-}
-
-
-.options {
+  }
+  
+  .options {
     align-items: center;
     background: #9f0303;
     border: 3px solid black;
@@ -75,55 +87,56 @@ main {
     flex-flow: column wrap;
     margin: 1rem;
     width: 27%;
-
-}
-
-.options img {
+  }
+  
+  .options img {
     border-bottom: 3px solid white;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     width: 100%;
     height: 250px;
-
-}
-
-.options h2 {
+  }
+  
+  .options h2 {
     border-bottom: 3px solid black;
     border-radius: 15px;
     box-shadow: 0px 5px 7px white, 0px 11px 14px black;
     font-size: 19px;
     padding: 5px;
     width: 90%;
-
-}
-
-.text {
+  }
+  
+  .text {
     background: white;
     border: 3px solid #0d8100;
     border-radius: 15px;
     display: none;
     margin: 5px;
     width: 90%;
-}
-
-.text p {
+  }
+  
+  .text p {
     color: black;
     font-size: 21px;
     padding: 3px;
-}
-
-.options:hover {
+  }
+  
+  .options:hover {
     border: 5px solid #0d8100;
-}
-
-.options:hover h2 {
+  }
+  
+  .options:hover h2 {
     border-bottom: 5px solid #0d8100;
     box-shadow: 0px 5px 7px white, 0px 11px 14px black;
-}
-
-.options:hover .text {
+  }
+  
+  .options:hover .text {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
-}
+  }
+  .preco {
+    background: #0b8e1a;
+    border-radius: 0.45rem;
+    color: #ffffff !important;
+  }

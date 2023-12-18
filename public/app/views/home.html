@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="./script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,17 +21,18 @@
     <link rel="stylesheet" href="../../assets/css/baseboard_style.css">
 </head>
 
-<body>
+<body onload="render()">
     <header>
         <div class="logo">
             <h1>PizzaForm</h1>
         </div>
         <div class="navbar">
-            <a href="home.html">Home</a>
+            <p id="username"></p>
+            <a id="profilePic" style="display: none;" href=""><img class="profilePic" src="../../assets/img/JiminDoBts.jpg" alt="profilePic"></a>
+            <a href="home.html">Inicio</a>
             <!-- <a href="promotions.">Promotions</a> -->
             <a href="menu.html">Menu</a>
-            <!-- <a href="about.html">About</a> -->
-            <a href="order.html">Order</a>
+            <a id="logon" href="cadastro.html">Cadastre-se</a>
         </div>
     </header>
     <main>
