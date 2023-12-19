@@ -1,11 +1,10 @@
 body {
   margin: 0;
 }
-a{
+a {
   text-decoration: none;
   color: #000000;
 }
-
 form {
   border: 0.05rem solid #a2a2a2;
   border-radius: 0.3rem;
@@ -13,7 +12,6 @@ form {
   text-align: center;
   width: 17rem;
 }
-
 form input {
   border: 0.1rem solid #a2a2a2;
   border-radius: 1.1rem;
@@ -28,7 +26,6 @@ h2 {
   margin: 0;
   padding: 0rem 0rem;
 }
-
 main {
   align-items: center;
   display: flex;

@@ -1,28 +1,86 @@
-*{
+* {
     padding: 0;
     margin: 0;
-}
-a{
+  }
+  a {
     text-decoration: none;
     color: black;
-}
-main{
+  }
+  h1 {
+    font-size: 2.1rem;
+    color: #ffffff;
+    margin: 1rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  main {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.userContainer{
-    background-color: gray ;
+  }
+  
+  .userContainer {
+    background-color: gray;
+    border: 0.15rem solid #a2a2a2;
+    border-radius: 1.5rem;
     width: 80%;
-    height: 100%;
+    height: 95vh;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    flex-direction: column;
-}
-.profileImg{
-    height: 100px;
-    width: 100px;
-}
+  }
+  .profileImg {
+    border: 0.11rem solid #ffffff;
+    border-radius: 7.1rem;
+    height: 15rem;
+    width: 15rem;
+  }
+  .userProfileImg {
+    margin-top: 3.5rem;
+    text-align: center;
+    width: 40vw;
+  }
+  .userInformation {
+    text-align: center;
+    width: 50vw;
+  }
+  .buttonExit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonExit a {
+    background: #059443;
+    border: 0.12rem solid #dbdbdb;
+    border-radius: 1.5rem;
+    color: #ffffff;
+    float: right;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 0.3rem 3rem;
+  }
+  .buttonExit a:hover {
+    background: #e32222;
+    color: #ffffff;
+    padding: 0.3rem 2.5rem;
+  }
+  .buttonExit button {
+    background: #e32222;
+    border: 0.12rem solid #dbdbdb;
+    border-radius: 1.5rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin: 1rem;
+    padding: 0.3rem 1rem;
+  }
+  /* .container {
+    border: 0.12rem solid #ffffff;
+    border-radius: 1rem;
+    height: 60vh;
+  } */

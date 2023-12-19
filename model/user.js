@@ -6,7 +6,7 @@ class client extends Model {
             username: DataTypes.STRING(1234),
             email: DataTypes.STRING(1234),
             password: DataTypes.STRING(1234),
-            refreshToken: DataTypes.STRING(1234),
+            adress: DataTypes.STRING(1234),
             role_level: DataTypes.INTEGER
         }, {
             sequelize, modelName: 'client'

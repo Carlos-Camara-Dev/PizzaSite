@@ -11,43 +11,20 @@ const getUsers = async (req, res)=>{
 const registerUser = async (req, res)=>{
     const username = req.body.username;
     const email = req.body.email;
+    const adress = req.body.adress;
     const plainPassword = req.body.password;
     const conflict = await client.findOne({ where: { email: email } })
     if(conflict) return res.status(400).json("Email already taken")
     const password = await bcrypt.hash(plainPassword, salt);
     if(!username||!email || !password) return res.status(400).json("Username, email and password are required")
-    const REFRESH_TOKEN = jwt.sign(
-        {
-            userInfo:{
-                username: username,
-                roles:1
-            }
-        },
-        process.env.REFRESH_TOKEN_SECRET,
-        {expiresIn: '24h'}
-
-    )
-    const ACCESS_TOKEN = jwt.sign(
-        {
-            userInfo:{
-                username: username,
-                roles:1
-            }
-        },
-        process.env.ACCESS_TOKEN_SECRET,
-        {expiresIn: '30s'}
-
-    )
     const clientResult = await client.create({
     role_level:1,
     username,
     email,
     password,
-    refreshToken: REFRESH_TOKEN
+    adress
 }); 
-    console.log(clientResult)
-    res.cookie('jwt', REFRESH_TOKEN,{expiresIn: '24h', httpOnly: true})
-    return res.json(ACCESS_TOKEN);
+    return res.json(clientResult);
 }
 
 const updateUser = async (req, res)=>{

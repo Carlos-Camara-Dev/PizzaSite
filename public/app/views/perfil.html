@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="../../assets/css/profile.css">
@@ -8,16 +9,27 @@
     <title>Usuario</title>
 
 </head>
-<body>
+
+<body onload="userInfoRender()">
     <main>
-        <div class="userContainer">
-            <a href="./home.html">Voltar</a>
-            <img class="profileImg" src="../../assets/img/JiminDoBts.jpg" alt="ProfilePic">
-            <h2>Username</h2>
-            <h2>Endereço</h2>
-            <h2>Compras</h2>
-            <button onclick="logout()">Finalizar sessão</button>
-        </div>
+        <section class="userContainer">
+            <section class="userProfileImg">
+                <img class="profileImg" src="../../assets/img/JiminDoBts.jpg" alt="ProfilePic">
+            </section>
+            <section class="container">
+                <div class="userInformation">
+                    <h2>Username</h2>
+                    <p id="username">Name</p>
+                    <h2>Endereço</h2>
+                    <p id="adress"> Rua: </p>
+                </div>
+                <div class="buttonExit">
+                    <button onclick="logout()">Finalizar sessão</button>
+                    <a href="./home.html">Voltar</a>
+                </div>
+            </section>
+        </section>
     </main>
 </body>
+
 </html>

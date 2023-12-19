@@ -4,37 +4,17 @@ const jwt = require('jsonwebtoken');
 const client = require('../model/user');
 
 const handleLogin = async (req, res) => {
-    const { username, password } = req.body
-    if (!username || !password) return res.sendStatus(400)
-    const userFound = await client.findOne({ where: {username: username} })
+    const { email, password } = req.body
+    if (!email || !password) return res.sendStatus(400)
+    const userFound = await client.findOne({ where: {email: email} })
     if(!userFound) return res.sendStatus(400)
     const match = await bcrypt.compare(password, userFound.password)
     if(match){
-        console.log(userFound.roles)
-        const roles = Object.values(userFound.roles)
-        const REFRESH_TOKEN = jwt.sign(
-            {
-                userInfo:{
-                    roles: roles,
-                    username: userFound.username
-                }
-            },
-            process.env.REFRESH_TOKEN_SECRET,
-            {expiresIn:'24h' }
-        )
-        const ACCESS_TOKEN = jwt.sign(
-            {
-                userInfo:{
-                    roles: roles,
-                    username: userFound.username
-                }
-            },
-            process.env.ACCESS_TOKEN_SECRET,
-            {expiresIn:'1m'}
-        )
-        await client.update({refreshToken: REFRESH_TOKEN}, {where:{username: username}})
-        res.cookie('jwt', REFRESH_TOKEN, {httpOnly:true, expiresIn: '24h'})
-        res.status(200).json(ACCESS_TOKEN)
+        const userInfo = {
+            username: userFound.username,
+            adress: userFound.adress
+        }
+        return res.status(200).json(userInfo)
     }
     else return res.sendStatus(403)
 }
